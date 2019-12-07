@@ -1,14 +1,16 @@
 .footer-block {
   background-color: #2f2f2f;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  p { color: white; }
+  p {
+    color: white;
+    margin-bottom: 5px;
+  }
 
   h4 {
     color: white;
     text-transform: uppercase;
-    padding-bottom: 20px;
   }
 }
 
