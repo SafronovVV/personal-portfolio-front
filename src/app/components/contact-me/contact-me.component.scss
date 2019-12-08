@@ -36,6 +36,7 @@
         button {
           background: $main-color;
           border: 0;
+          border-radius: 0%;
           padding: 10px 30px;
           color: #fff;
           transition: 0.4s;
@@ -43,6 +44,11 @@
 
           &:hover {
             background: $main-color-lighten;
+          }
+
+          &[disabled] {
+            background-color: grey;
+            cursor: unset;
           }
         }
       }
