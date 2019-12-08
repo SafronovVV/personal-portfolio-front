@@ -1,0 +1,62 @@
+@import "variables";
+
+.contact-me-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .contact-me-block {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .contact-me-info {
+      text-align: center;
+    }
+
+    .contact-form {
+      input, textarea {
+        padding: 10px 12px;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 14px;
+        height: auto;
+
+        &:focus {
+          outline: none;
+          border: 1px solid #ced4da;
+        }
+      }
+
+      label {
+        color: #999;
+      }
+
+      .form-send {
+        text-align: center;
+
+        button {
+          background: $main-color;
+          border: 0;
+          padding: 10px 30px;
+          color: #fff;
+          transition: 0.4s;
+          cursor: pointer;
+
+          &:hover {
+            background: $main-color-lighten;
+          }
+        }
+      }
+
+      .validate {
+        color: #a94442;
+        margin: 5px 0px;
+        font-weight: 400;
+        font-size: 13px;
+      }
+
+      .ng-invalid:not(form)  {
+        border-left: 3px solid #a94442; /* red */
+      }
+    }
+  }
+}

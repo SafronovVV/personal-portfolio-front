@@ -1,0 +1,38 @@
+<div class="container contact-me-container">
+  <div class="row contact-me-block align-items-center justify-content-center">
+    <div class="col-lg-6 contact-me-info">
+      <h3>CONTACT ME</h3>
+      <hr>
+      <p>I am ready for offers and discussions</p>
+    </div>
+  </div>
+  <div class="row contact-me-block align-items-center justify-content-center">
+    <div class="col-lg-8">
+      <form #contactMeForm="ngForm" (ngSubmit)="onFormSubmit()" class="contact-form">
+        <div class="form-group">
+          <input type="name" id="name" name="name" #name="ngModel" [(ngModel)]="contactForm.name" class="form-control"
+            placeholder="Your Name" required>
+          <div [hidden]="name.valid || name.pristine" class="validate">Name is required</div>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="contactForm.email"
+            class="form-control" placeholder="Your Email" required pattern="^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$">
+          <div [hidden]="email.valid || email.pristine" class="validate">Email is empty or incorrect</div>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" #subject="ngModel" [(ngModel)]="contactForm.subject"
+            class="form-control" placeholder="Subject" required>
+          <div [hidden]="subject.valid || subject.pristine" class="validate">Subject is required</div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="message" name="message" #message="ngModel"
+            [(ngModel)]="contactForm.message" placeholder="Your Message" rows="5" required></textarea>
+          <div [hidden]="message.valid || message.pristine" class="validate">Message is required</div>
+        </div>
+        <div class="form-send">
+          <button type="submit" class="btn btn-large" [disabled]="!contactMeForm.form.valid">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
