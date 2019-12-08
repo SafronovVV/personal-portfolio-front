@@ -1,0 +1,55 @@
+<div class="welcome-section">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-8 centered">
+        <img class="avatar" src="../../../assets/images/avatar.jpg" alt="Stanley">
+        <h1>About me!</h1>
+        <p>Hello everybody, my name is Vlad and I am a software developper from Russia.
+          Since childhood, I was fascinated by programming, to study how certain games work. Back in school, I made
+          various modifications for games, was engaged in 3d modeling, writing simple web pages and scripts. At the
+          university, I liked studying the basic principles of programming, patterns and architecture. Now I apply all
+          gained knowledge in work. I like finding a solution to difficult issues using a creative approach.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container information-section">
+  <div class="row achievements-block align-items-center justify-content-center">
+    <div class="col-lg-3 achievement-block">
+      <i class="fa fa-book fa-4x" aria-hidden="true"></i>
+      <p>Penza State University, bachelors degree in Information systems and technologies, 2014 -2018</p>
+    </div>
+    <div class="col-lg-3 achievement-block">
+      <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+      <p>Responsible, executive, sociable, always trying to get things done</p>
+    </div>
+    <div class="col-lg-3 achievement-block">
+      <i class="fa fa-star fa-4x" aria-hidden="true"></i>
+      <p>Interested in attractive projects or tasks, gaining new experience and communicating with friendly team</p>
+    </div>
+    <div class="col-lg-3 achievement-block">
+      <i class="fa fa-building fa-4x" aria-hidden="true"></i>
+      <p>Currently busy in <a target="_blank" href="https://okdesk.ru/">Okdesk</a></p>
+    </div>
+  </div>
+  <div class="row skills-block">
+    <div class="col-lg-6">
+      <h4>THE THINKING</h4>
+      <p>I had experience with many technologies, but my main profile is the development and support of highload web
+        applications. I prefer the development of the frontend part. There is also vast experience in developing
+        cross-platform mobile applications.</p>
+    </div>
+    <div class="col-lg-6" *ngIf="skillsList.length > 0">
+      <h4>THE SKILLS</h4>
+      <div *ngFor="let skill of skillsList" class="skill-block">
+        <p class="skill-name">{{ skill.name }}</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-theme" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+            [style.width.%]="skill.level">
+            <span class="sr-only">{{ skill.level }}% Complete</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   private navBarOpened: boolean = false;
-  private linksList: Array<any> = [];
+  private linksList: Array<any> = [
+    { name: 'About me', routerLink: ['/about-me'] }
+  ];
 
   ngOnInit() {}
 
