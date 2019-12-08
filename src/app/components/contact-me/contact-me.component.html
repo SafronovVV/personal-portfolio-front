@@ -35,7 +35,7 @@
           <div [hidden]="message.valid || message.pristine" class="validate">Message is required</div>
         </div>
         <div class="form-send">
-          <button type="submit" class="btn btn-large" [disabled]="!contactMeForm.form.valid && !formSubmitting">
+          <button type="submit" class="btn btn-large" [disabled]="!contactMeForm.form.valid || formSubmitting">
             {{ formSubmitting ? 'Sending...' : 'Send Message' }}
           </button>
         </div>
