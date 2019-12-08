@@ -1,9 +1,11 @@
+@import "variables";
+
 .navbar.navbar-dark {
   text-transform: uppercase;
   margin-bottom: 0px;
   padding: 30px 0;
-  background-color: #1abc9c!important;
-  border-color: #16a085;
+  background-color: $main-color!important;
+  border-color: $main-color;
 
   .navbar-brand {
     color: white;

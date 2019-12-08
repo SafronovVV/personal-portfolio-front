@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+@import "variables";
 
 body {
   background-color: #ffffff;
@@ -44,7 +45,7 @@ div {
 /* Links */
 
 a {
-  color: #1abc9c;
+  color: $main-color;
   word-wrap: break-word;
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   -moz-transition: color 0.1s ease-in, background 0.1s ease-in;

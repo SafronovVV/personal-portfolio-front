@@ -1,3 +1,5 @@
+@import "variables";
+
 .skills-block {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -7,7 +9,7 @@
   }
 
   .progress-bar-theme {
-  background-color: #1abc9c;
+  background-color: $main-color;
   }
 }
 
@@ -25,7 +27,7 @@
     width: 300px;
     height: auto;
     border-radius: 50%;
-    border: 6px solid #1abc9c;
+    border: 6px solid $main-color;
   }
 }
 
@@ -36,7 +38,7 @@
 
     .fa {
       margin-bottom: 10px;
-      color: #1abc9c;
+      color: $main-color;
     }
 
     p {
