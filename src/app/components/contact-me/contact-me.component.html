@@ -1,4 +1,9 @@
-<div class="container contact-me-container">
+<div *ngIf="formSubmitted" class="container contact-me-container">
+  <div class="row contact-me-block align-items-center justify-content-center">
+    <app-success-banner message="Your email successfully sent! I will read it soon..."></app-success-banner>
+  </div>
+</div>
+<div *ngIf="!formSubmitted" class="container contact-me-container">
   <div class="row contact-me-block align-items-center justify-content-center">
     <div class="col-lg-6 contact-me-info">
       <h3>CONTACT ME</h3>
@@ -30,7 +35,9 @@
           <div [hidden]="message.valid || message.pristine" class="validate">Message is required</div>
         </div>
         <div class="form-send">
-          <button type="submit" class="btn btn-large" [disabled]="!contactMeForm.form.valid">Send Message</button>
+          <button type="submit" class="btn btn-large" [disabled]="!contactMeForm.form.valid && !formSubmitting">
+            {{ formSubmitting ? 'Sending...' : 'Send Message' }}
+          </button>
         </div>
       </form>
     </div>
