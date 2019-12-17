@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RequestService {
+	// some test private data
   private readonly AUTH_KEY: string = '2xwVwutjqsrERU7PPGMSW9jpjYSFZJJa';
   private readonly BASE_URL: string = 'http://localhost:3000/api/v1/'
   private readonly REQUEST_HEADERS: any = {
